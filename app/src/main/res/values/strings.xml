@@ -5,10 +5,21 @@
 
     <string-array name="beer_colors">
          <item>light</item>
-         <item>amber</item>
+         <item>ambar</item>
          <item>brown</item>
          <item>dark</item>
          <item>craft</item>
+
+    </string-array>
+    <string name="buscar_señal">Buscar</string>
+    <string name="señales" >no señal select</string>
+
+    <string-array name="tipos_señales_transito">
+
+        <item>Reglamentarias</item>
+        <item>Preventivas</item>
+        <item>Informativas</item>
+        <item>Transitorias</item>
 
     </string-array>
 

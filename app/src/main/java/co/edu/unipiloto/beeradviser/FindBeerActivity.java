@@ -13,6 +13,8 @@ import java.util.List;
 public class FindBeerActivity extends AppCompatActivity {
 
     private BeerExpert expert= new BeerExpert();
+    private SignsExpert signs=new SignsExpert();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,18 @@ public class FindBeerActivity extends AppCompatActivity {
             brandsFormatted.append(brand).append('\n');
         }
         brands.setText(brandsFormatted);
+    }
+
+    public void onClickBuscarSeñal (View view){
+        TextView señales =(TextView) findViewById(R.id.señales);
+        Spinner clasificacion_SeñalesT= (Spinner) findViewById(R.id.clasificacion_SeñalesT);
+        String señalType=String.valueOf(clasificacion_SeñalesT.getSelectedItem());
+        List<String> señaleslist = signs.getseñales(señalType);
+        StringBuilder señalesFormatted= new StringBuilder();
+        for (String señal: señaleslist){
+            señalesFormatted.append(señal).append('\n');
+        }
+        señales.setText(señalesFormatted);
     }
 
 }
